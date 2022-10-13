@@ -70,5 +70,24 @@
             container.appendChild(element)
         }
     </script>
+	<!-- Part 8: Implement Get and Spin.--> 
+    <script>
+        function get() {
+            let cyclerItems = document.getElementsByClassName("cycler")
+            if(cyclerItems.length > 0) {
+                cyclerItems[cyclerItems.length-1].remove()
+            }
+        }
+
+        function spin() {
+            let cyclerItems = document.getElementsByClassName("cycler")
+            if(cyclerItems.length > 1) {
+                removedItem = cyclerItems[cyclerItems.length-1]
+                cyclerItems[cyclerItems.length-1].remove()
+                let container = document.getElementById("target")
+                container.insertBefore(removedItem, container.firstChild)
+            }
+        }
+    </script>
 
 </html>
